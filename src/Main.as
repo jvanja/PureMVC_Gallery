@@ -9,13 +9,14 @@ package
 	 */
 	public class Main extends Sprite 
 	{
-		
+		// constructor function
 		public function Main():void 
 		{
 			if (stage) init();
 			else addEventListener(Event.ADDED_TO_STAGE, init);
 		}
 		
+		// after added to stage initialize the app
 		private function init(e:Event = null):void 
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, init);
