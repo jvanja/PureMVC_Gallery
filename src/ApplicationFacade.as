@@ -17,7 +17,8 @@ package
 		public static const INDEX_UPDATE:String     = "index update";
 		static public const LOAD_COMPLETE:String 	= "loadComplete";
 
-        public static function getInstance(): ApplicationFacade {
+        // this class iis singleton so no NEW() is allowed
+		public static function getInstance(): ApplicationFacade {
 			trace("[FACADE] GET INSTANCE");
             if (instance == null) {
 				instance = new ApplicationFacade( );
